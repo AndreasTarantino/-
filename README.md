@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="el">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ΕΛ.ΑΣ | Εγχειρίδιο Αστυνομίας</title>
+<title>ΕΛ.ΑΣ | Greek RP Police Portal</title>
 
 <style>
 
@@ -17,377 +16,266 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#08131f;
+background:#000;
 color:white;
 }
 
+/* BACKGROUND */
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.65);
+}
+
+/* NAV */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#06101a;
-padding:15px;
-z-index:999;
-box-shadow:0 0 20px rgba(0,0,0,.5);
-}
-
-nav ul{
 display:flex;
-justify-content:center;
-list-style:none;
-flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+z-index:10;
+background:rgba(0,0,0,.3);
+backdrop-filter:blur(10px);
 }
 
-nav ul li{
-margin:10px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
+.logo{
+font-size:20px;
 font-weight:bold;
 }
 
-nav a:hover{
-color:#4aa3ff;
-}
-
-.hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+.menu{
 display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+gap:20px;
 }
 
-.hero h1{
-font-size:70px;
-margin-bottom:15px;
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
 }
 
-.hero p{
-font-size:22px;
+.menu a:hover{
+color:#4da6ff;
 }
 
+/* CENTER */
+.center{
+position:relative;
+z-index:2;
+color:white;
+}
+
+.center h1{
+font-size:60px;
+letter-spacing:3px;
+}
+
+.center p{
+font-size:18px;
+opacity:.8;
+margin-top:10px;
+}
+
+.btns{
+margin-top:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+background:#0066cc;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#0080ff;
+}
+
+/* SECTIONS */
 section{
 padding:100px 20px;
-max-width:1200px;
+background:#0b111a;
+}
+
+.container{
+max-width:1100px;
 margin:auto;
 }
 
 h2{
-margin-bottom:25px;
-color:#59b0ff;
 text-align:center;
+margin-bottom:40px;
+color:#4da6ff;
 }
 
 .card{
-background:#102033;
-padding:30px;
-border-radius:15px;
-margin-bottom:25px;
-border:1px solid #1f3a5c;
+background:#121c2a;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+border:1px solid #1f2d40;
 }
 
-.card p{
-margin-bottom:15px;
-line-height:1.8;
-}
-
-.card li{
-margin-bottom:10px;
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
+<div class="logo">🚔 ΕΛ.ΑΣ PORTAL</div>
 
-<ul>
-
-<li><a href="#deontology">Κώδικας Δεοντολογίας</a></li>
-
-<li><a href="#rights">Δικαιώματα Πολίτη</a></li>
-
-<li><a href="#radio">Ασύρματοι</a></li>
-
-<li><a href="#center">Κέντρο</a></li>
-
-<li><a href="#units">Κλιμάκια</a></li>
-
-<li><a href="#schools">Σχολές</a></li>
-
-<li><a href="#staff">Προσωπικό</a></li>
-
-</ul>
-
+<div class="menu">
+<a href="#home">Αρχική</a>
+<a href="#code">Κώδικας</a>
+<a href="#rights">Δικαιώματα</a>
+<a href="#units">Κλιμάκια</a>
+<a href="#schools">Σχολές</a>
+<a href="#staff">Προσωπικό</a>
+<a href="YOUR_DISCORD_LINK">Discord</a>
+</div>
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<div class="hero" id="home">
+<div class="overlay"></div>
 
-<div>
+<div class="center">
+<h1>ΕΛΛΗΝΙΚΗ ΑΣΤΥΝΟΜΙΑ</h1>
+<p>FiveM Roleplay Official Police Portal</p>
 
-<h1>🚔 ΕΛ.ΑΣ</h1>
-
-<p>Επίσημο Εγχειρίδιο Ελληνικής Αστυνομίας FiveM</p>
-
+<div class="btns">
+<a class="btn" href="YOUR_FIVEM_LINK">Σύνδεση Server</a>
+<a class="btn" href="YOUR_DISCORD_LINK">Discord</a>
+</div>
+</div>
 </div>
 
-</section>
-
-<section id="deontology">
-
-<h2>ΚΩΔΙΚΑΣ ΔΕΟΝΤΟΛΟΓΙΑΣ ΑΣΤΥΝΟΜΙΚΩΝ</h2>
+<!-- CODE -->
+<section id="code">
+<div class="container">
+<h2>Κώδικας Δεοντολογίας</h2>
 
 <div class="card">
-
-<p>1. Ο κάθε αστυνομικός είναι υποχρεωμένος να υπακούει τους νόμους και να είναι προασπιστής αυτών.</p>
-
-<p>2. Ο κάθε αστυνομικός είναι υποχρεωμένος να διατηρεί την ψυχραιμία του σε καταστάσεις που πάνε να ξεφύγουν από τον έλεγχο του.</p>
-
-<p>3. Ο κάθε αστυνομικός είναι υποχρεωμένος να σέβεται τους πολίτες, να απευθύνεται στον πληθυντικό και να είναι σε θέση να τους προστατέψει ακόμη και με κίνδυνο της ασφάλειάς του.</p>
-
-<p>4. Ο κάθε αστυνομικός οφείλει να σέβεται την ιεραρχία και να εκτελεί τις εντολές των ανωτέρων του.</p>
-
-<p>5. Ο υπηρεσιακός εξοπλισμός χρησιμοποιείται μόνο εν ώρα υπηρεσίας.</p>
-
+<p>1. Ο κάθε αστυνομικός υπακούει τους νόμους.</p>
+<p>2. Διατηρεί ψυχραιμία σε κάθε κατάσταση.</p>
+<p>3. Σέβεται τους πολίτες και λειτουργεί επαγγελματικά.</p>
+<p>4. Τηρεί την ιεραρχία χωρίς αντίρρηση.</p>
+<p>5. Χρήση εξοπλισμού μόνο εν ώρα υπηρεσίας.</p>
 </div>
 
+</div>
 </section>
 
+<!-- RIGHTS -->
 <section id="rights">
-
-<h2>ΔΙΚΑΙΩΜΑΤΑ ΠΟΛΙΤΗ</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Βρίσκεστε υπό κράτηση/σύλληψη για τον αντίστοιχο λόγο.</li>
-
-<li>Έχετε το δικαίωμα να παραμείνετε σιωπηλοί.</li>
-
-<li>Ό,τι πείτε μπορεί και θα χρησιμοποιηθεί εναντίον σας στο δικαστήριο.</li>
-
-<li>Έχετε το δικαίωμα να κάνετε ένα τηλεφώνημα.</li>
-
-<li>Έχετε δικαίωμα νομικής εκπροσώπησης.</li>
-
-<li>Φαγητό και νερό δεν αφαιρούνται ποτέ.</li>
-
-<li>Η ταυτοποίηση πραγματοποιείται μέσω MDT.</li>
-
-<li>Αναφέρονται πάντα οι κατηγορίες και η συνολική ποινή.</li>
-
-<li>Σε περίπτωση αιτήματος παρέχεται δικηγόρος εφόσον είναι διαθέσιμος.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="radio">
-
-<h2>ΠΡΩΤΟΚΟΛΛΟ ΑΣΥΡΜΑΤΩΝ</h2>
+<div class="container">
+<h2>Δικαιώματα Πολίτη</h2>
 
 <div class="card">
-
-<p><strong>Τι είναι η Διαβίβαση;</strong></p>
-
-<p>Διαβίβαση είναι η ενημέρωση του κέντρου από αστυνομικούς ή μονάδες για όσα συμβαίνουν στο πεδίο.</p>
-
-<p><strong>Τι είναι το Κέντρο;</strong></p>
-
-<p>Το κέντρο είναι υπεύθυνο για τον συντονισμό όλων των μονάδων και τη διαχείριση των συμβάντων.</p>
-
+<p>• Δικαίωμα σιωπής</p>
+<p>• Δικαίωμα δικηγόρου</p>
+<p>• Δικαίωμα τηλεφωνήματος</p>
+<p>• Ό,τι πείτε μπορεί να χρησιμοποιηθεί στο δικαστήριο</p>
+<p>• Τα δικαιώματα διαβάζονται πάντα πριν τη διαδικασία</p>
 </div>
 
-</section>
-
-<section id="center">
-
-<h2>ΑΡΜΟΔΙΟΤΗΤΕΣ ΚΕΝΤΡΟΥ</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Το κέντρο δεν εγκαταλείπει το τμήμα χωρίς έγκριση διοίκησης.</li>
-
-<li>Φορά πάντα τμηματική στολή.</li>
-
-<li>Γνωρίζει όλους τους κώδικες ασυρμάτου.</li>
-
-<li>Ελέγχει τις μονάδες ανά τακτά χρονικά διαστήματα.</li>
-
-<li>Οργανώνει ληστείες, ομηρίες και επιχειρήσεις.</li>
-
-<li>Παρακολουθεί τα tweets, τα μηνύματα πολιτών και τα robbery chats.</li>
-
-<li>Γνωρίζει όλες τις συχνότητες και τις ενέργειες των μονάδων.</li>
-
-<li>Οργανώνει Ε.Κ.Α.Μ ή Ο.Π.Κ.Ε σε περιπτώσεις ομηρίας.</li>
-
-</ul>
-
 </div>
-
 </section>
+
+<!-- UNITS -->
 <section id="units">
+<div class="container">
+<h2>Κλιμάκια ΕΛ.ΑΣ</h2>
 
-<h2>ΚΛΙΜΑΚΙΑ ΕΛ.ΑΣ</h2>
+<div class="grid">
 
 <div class="card">
-
-<h3>🚓 ΠΡΩΤΟΚΟΛΛΟ ΑΜΕΣΗΣ ΔΡΑΣΗΣ (Α.Δ.)</h3>
-
-<br>
-
-<p>Η Άμεση Δράση αποτελεί τη ραχοκοκαλιά της ΕΛ.ΑΣ και είναι οι πρώτες μονάδες που ανταποκρίνονται σε συμβάντα και κλήσεις.</p>
-
-<p>Η Α.Δ πραγματοποιεί περιπολίες εντός πόλης και δεν επιχειρεί εκτός αυτής χωρίς έγκριση κέντρου.</p>
-
-<p>Η Α.Δ αποτελείται πάντα από δύο αστυνομικούς σε περιπολικό όχημα.</p>
-
-<p>Ο συνοδηγός διαβιβάζει πληροφορίες στο κέντρο ενώ ο οδηγός παραμένει προσηλωμένος στην οδήγηση.</p>
-
+<h3>🚓 Α.Δ</h3>
+<p>Άμεση Δράση – πρώτη ανταπόκριση σε συμβάντα.</p>
 </div>
 
 <div class="card">
-
-<h3>🏍️ ΠΡΩΤΟΚΟΛΛΟ ΔΙ.ΑΣ</h3>
-
-<br>
-
-<p>Η ΔΙ.ΑΣ αποτελεί ταχεία μονάδα επέμβασης και υποστήριξης της Άμεσης Δράσης.</p>
-
-<p>Συμμετέχει σε καταδιώξεις, traffic stops και ελέγχους ύποπτων πολιτών ή οχημάτων.</p>
-
-<p>Η ΔΙ.ΑΣ αποτελείται πάντα από δύο αστυνομικούς σε υπηρεσιακή μοτοσυκλέτα.</p>
-
-<p>Την επικοινωνία με πολίτες και το σήμα το διαχειρίζεται αποκλειστικά ο ομαδάρχης.</p>
-
+<h3>🏍️ ΔΙ.ΑΣ</h3>
+<p>Ταχεία επέμβαση και καταδιώξεις.</p>
 </div>
 
 <div class="card">
-
-<h3>🛡️ ΠΡΩΤΟΚΟΛΛΟ Ο.Π.Κ.Ε</h3>
-
-<br>
-
-<p>Η Ομάδα Πρόληψης και Καταστολής Εγκλήματος επιχειρεί σε περιοχές αυξημένης επικινδυνότητας.</p>
-
-<p>Αποτελεί βασική υποστηρικτική μονάδα για Ε.Κ.Α.Μ και ειδικές επιχειρήσεις.</p>
-
-<p>Διαθέτει αυξημένες επιχειρησιακές αρμοδιότητες και μπορεί να φέρει οπλισμό σε ετοιμότητα.</p>
-
-<p>Το σήμα δεν γνωστοποιείται σε πολίτες για λόγους ασφαλείας και ανωνυμίας.</p>
-
+<h3>🛡️ Ο.Π.Κ.Ε</h3>
+<p>Ειδικές επιχειρήσεις υψηλού κινδύνου.</p>
 </div>
 
 <div class="card">
-
-<h3>⚔️ ΠΡΩΤΟΚΟΛΛΟ Ε.Κ.Α.Μ</h3>
-
-<br>
-
-<p>Η Ειδική Κατασταλτική Αντιτρομοκρατική Μονάδα είναι η ανώτατη επιχειρησιακή μονάδα της ΕΛ.ΑΣ.</p>
-
-<p>Αναλαμβάνει ομηρίες, τρομοκρατικές ενέργειες, βαριά οπλισμένους κακοποιούς και ειδικές αποστολές.</p>
-
-<p>Η ενεργοποίηση της μονάδας πραγματοποιείται αποκλειστικά με εντολή του Αρχηγού της ΕΛ.ΑΣ.</p>
-
-<p>Η Ε.Κ.Α.Μ διατηρεί πλήρη ανωνυμία και δεν γνωστοποιεί το σήμα της.</p>
+<h3>⚔️ Ε.Κ.Α.Μ</h3>
+<p>Αντιτρομοκρατικές και κρίσιμες αποστολές.</p>
+</div>
 
 </div>
 
+</div>
 </section>
 
+<!-- SCHOOLS -->
 <section id="schools">
-
-<h2>🎓 ΣΧΟΛΕΣ ΕΛΛΗΝΙΚΗΣ ΑΣΤΥΝΟΜΙΑΣ</h2>
+<div class="container">
+<h2>Σχολές ΕΛ.ΑΣ</h2>
 
 <div class="card">
-
 <h3>Σχολή Δοκίμων Αστυφυλάκων</h3>
-
-<br>
-
-<p>Η Σχολή Δοκίμων Αστυφυλάκων αποτελεί το θεμέλιο της εκπαίδευσης και ένταξης νέων μελών στο Σώμα.</p>
-
-<p>Όλοι οι υποψήφιοι που επιθυμούν να αναλάβουν καθήκοντα αστυνόμευσης υποχρεούνται να ολοκληρώσουν επιτυχώς τη σχολή.</p>
-
-<p>Η εκπαίδευση περιλαμβάνει νομοθεσία, κανονισμούς, διαδικασίες ελέγχου, χρήση εξοπλισμού, επιχειρησιακές τακτικές, επικοινωνία μέσω ασυρμάτου και βασικές αρχές αυτοάμυνας.</p>
-
-<p>Δίνεται ιδιαίτερη έμφαση στην πειθαρχία, στην ιεραρχία και στη συνεργασία.</p>
-
-<br>
-
-<h3>Κανονισμοί Σχολής</h3>
-
-<ul>
-
-<li>Υποχρεωτική παρουσία σε όλα τα μαθήματα.</li>
-
-<li>Υποχρεωτικό Roleplay καθ' όλη τη διάρκεια της εκπαίδευσης.</li>
-
-<li>Απαγορεύεται κάθε OOC επικοινωνία.</li>
-
-<li>Τήρηση ιεραρχίας και άμεση εκτέλεση εντολών.</li>
-
-<li>Χρήση εξοπλισμού μόνο με άδεια εκπαιδευτή.</li>
-
-<li>Σεβασμός προς εκπαιδευτές και συναδέλφους.</li>
-
-<li>Υποχρεωτική συμμετοχή στα εκπαιδευτικά σενάρια.</li>
-
-</ul>
-
+<p>Εκπαίδευση νέων αστυνομικών με θεωρία και πρακτική.</p>
 </div>
 
 <div class="card">
-
 <h3>Σχολή Αξιωματικών</h3>
-
-<br>
-
-<p>Δεν υπάρχουν ακόμη διαθέσιμες πληροφορίες.</p>
-
-<p>Η ενότητα θα ενημερωθεί σύντομα από τη Διοίκηση.</p>
-
+<p>Ανώτερη εκπαίδευση στελεχών και ηγεσίας.</p>
 </div>
 
+</div>
 </section>
 
+<!-- STAFF -->
 <section id="staff">
-
-<h2>👮 ΔΙΟΙΚΗΣΗ</h2>
+<div class="container">
+<h2>Προσωπικό</h2>
 
 <div class="card">
-
 <h3>Διοικητής ΕΛ.ΑΣ</h3>
-
-<br>
-
-<p><strong>Andreas Tarantino</strong></p>
-
+<p>Andreas Tarantino</p>
 </div>
 
+</div>
 </section>
-
-<footer>
-
-<p>© 2026 Ελληνική Αστυνομία FiveM Roleplay</p>
-
-<p>Όλα τα δικαιώματα διατηρούνται.</p>
-
-</footer>
 
 </body>
 </html>
