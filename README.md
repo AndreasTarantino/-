@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ΕΛ.ΑΣ | Greek RP Police Portal</title>
+<title>GreekLife EL.AS | Ultra Police Portal</title>
 
 <style>
 
@@ -16,11 +16,51 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#000;
+background:#050b14;
 color:white;
 }
 
-/* BACKGROUND */
+/* TOP NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 40px;
+z-index:1000;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.menu{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:13px;
+transition:.3s;
+opacity:.85;
+}
+
+.menu a:hover{
+color:#4da6ff;
+opacity:1;
+}
+
+/* HERO */
 .hero{
 height:100vh;
 background:url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=80");
@@ -31,6 +71,23 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+overflow:hidden;
+}
+
+/* animated overlay */
+.hero::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(0,102,204,.25),transparent 60%);
+animation:move 8s infinite linear;
+}
+
+@keyframes move{
+0%{transform:translate(-20%,-20%);}
+50%{transform:translate(20%,20%);}
+100%{transform:translate(-20%,-20%);}
 }
 
 .overlay{
@@ -39,74 +96,39 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.65);
+background:rgba(0,0,0,.7);
 }
 
-/* NAV */
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-z-index:10;
-background:rgba(0,0,0,.3);
-backdrop-filter:blur(10px);
-}
-
-.logo{
-font-size:20px;
-font-weight:bold;
-}
-
-.menu{
-display:flex;
-gap:20px;
-}
-
-.menu a{
-color:white;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-
-.menu a:hover{
-color:#4da6ff;
-}
-
-/* CENTER */
-.center{
+.hero-content{
 position:relative;
 z-index:2;
-color:white;
+animation:fadeIn 1.2s ease;
 }
 
-.center h1{
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.hero h1{
 font-size:60px;
 letter-spacing:3px;
 }
 
-.center p{
-font-size:18px;
-opacity:.8;
+.hero p{
 margin-top:10px;
-}
-
-.btns{
-margin-top:25px;
+opacity:.8;
+font-size:18px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
-margin:10px;
+margin-top:20px;
+padding:12px 26px;
 background:#0066cc;
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 transition:.3s;
 }
 
@@ -117,8 +139,8 @@ background:#0080ff;
 
 /* SECTIONS */
 section{
-padding:100px 20px;
-background:#0b111a;
+padding:110px 20px;
+background:#07101d;
 }
 
 .container{
@@ -128,23 +150,42 @@ margin:auto;
 
 h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:35px;
 color:#4da6ff;
+font-size:28px;
 }
 
+/* CARDS */
 .card{
-background:#121c2a;
+background:rgba(15,27,45,.85);
+backdrop-filter:blur(10px);
 padding:25px;
-border-radius:12px;
+border-radius:14px;
 margin-bottom:20px;
-border:1px solid #1f2d40;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#4da6ff;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:15px;
+}
+
+/* SMALL TAG */
+.tag{
+display:inline-block;
+padding:3px 10px;
+font-size:12px;
+background:#0b3b66;
+border-radius:20px;
+margin-bottom:10px;
 }
 
 </style>
@@ -154,7 +195,7 @@ gap:20px;
 
 <!-- NAV -->
 <nav>
-<div class="logo">🚔 ΕΛ.ΑΣ PORTAL</div>
+<div class="logo">🚔 GreekLife EL.AS</div>
 
 <div class="menu">
 <a href="#home">Αρχική</a>
@@ -168,19 +209,17 @@ gap:20px;
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="home">
+<section class="hero" id="home">
 <div class="overlay"></div>
 
-<div class="center">
-<h1>ΕΛΛΗΝΙΚΗ ΑΣΤΥΝΟΜΙΑ</h1>
-<p>FiveM Roleplay Official Police Portal</p>
+<div class="hero-content">
+<h1>ΚΑΛΩΣΟΡΙΣΕΣ</h1>
+<p>στην ιστοσελίδα του GreekLife EL.AS</p>
 
-<div class="btns">
 <a class="btn" href="YOUR_FIVEM_LINK">Σύνδεση Server</a>
 <a class="btn" href="YOUR_DISCORD_LINK">Discord</a>
 </div>
-</div>
-</div>
+</section>
 
 <!-- CODE -->
 <section id="code">
@@ -188,11 +227,12 @@ gap:20px;
 <h2>Κώδικας Δεοντολογίας</h2>
 
 <div class="card">
-<p>1. Ο κάθε αστυνομικός υπακούει τους νόμους.</p>
-<p>2. Διατηρεί ψυχραιμία σε κάθε κατάσταση.</p>
-<p>3. Σέβεται τους πολίτες και λειτουργεί επαγγελματικά.</p>
-<p>4. Τηρεί την ιεραρχία χωρίς αντίρρηση.</p>
-<p>5. Χρήση εξοπλισμού μόνο εν ώρα υπηρεσίας.</p>
+<span class="tag">ΕΛ.ΑΣ SOP</span>
+<p>• Υπακοή στην ιεραρχία και στους νόμους</p>
+<p>• Ψυχραιμία σε όλα τα περιστατικά</p>
+<p>• Σεβασμός προς πολίτες</p>
+<p>• Χρήση εξοπλισμού μόνο εν υπηρεσία</p>
+<p>• Επαγγελματική συμπεριφορά πάντα</p>
 </div>
 
 </div>
@@ -204,11 +244,12 @@ gap:20px;
 <h2>Δικαιώματα Πολίτη</h2>
 
 <div class="card">
+<span class="tag">Legal Protocol</span>
 <p>• Δικαίωμα σιωπής</p>
 <p>• Δικαίωμα δικηγόρου</p>
 <p>• Δικαίωμα τηλεφωνήματος</p>
-<p>• Ό,τι πείτε μπορεί να χρησιμοποιηθεί στο δικαστήριο</p>
-<p>• Τα δικαιώματα διαβάζονται πάντα πριν τη διαδικασία</p>
+<p>• Ό,τι πείτε χρησιμοποιείται στο δικαστήριο</p>
+<p>• Διαβάζονται πάντα πριν τη σύλληψη</p>
 </div>
 
 </div>
@@ -223,7 +264,7 @@ gap:20px;
 
 <div class="card">
 <h3>🚓 Α.Δ</h3>
-<p>Άμεση Δράση – πρώτη ανταπόκριση σε συμβάντα.</p>
+<p>Πρώτη ανταπόκριση σε όλα τα συμβάντα.</p>
 </div>
 
 <div class="card">
@@ -233,12 +274,12 @@ gap:20px;
 
 <div class="card">
 <h3>🛡️ Ο.Π.Κ.Ε</h3>
-<p>Ειδικές επιχειρήσεις υψηλού κινδύνου.</p>
+<p>Υψηλού κινδύνου επιχειρήσεις.</p>
 </div>
 
 <div class="card">
 <h3>⚔️ Ε.Κ.Α.Μ</h3>
-<p>Αντιτρομοκρατικές και κρίσιμες αποστολές.</p>
+<p>Αντιτρομοκρατικές αποστολές.</p>
 </div>
 
 </div>
@@ -253,12 +294,12 @@ gap:20px;
 
 <div class="card">
 <h3>Σχολή Δοκίμων Αστυφυλάκων</h3>
-<p>Εκπαίδευση νέων αστυνομικών με θεωρία και πρακτική.</p>
+<p>Βασική εκπαίδευση νέων αστυνομικών.</p>
 </div>
 
 <div class="card">
 <h3>Σχολή Αξιωματικών</h3>
-<p>Ανώτερη εκπαίδευση στελεχών και ηγεσίας.</p>
+<p>Ανώτερη εκπαίδευση και ηγεσία.</p>
 </div>
 
 </div>
@@ -267,10 +308,10 @@ gap:20px;
 <!-- STAFF -->
 <section id="staff">
 <div class="container">
-<h2>Προσωπικό</h2>
+<h2>Διοίκηση</h2>
 
 <div class="card">
-<h3>Διοικητής ΕΛ.ΑΣ</h3>
+<h3>👮 Διοικητής ΕΛ.ΑΣ</h3>
 <p>Andreas Tarantino</p>
 </div>
 
