@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="el">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ΕΛ.ΑΣ | Ελληνική Αστυνομία</title>
+<title>ΕΛ.ΑΣ | Ελληνική Αστυνομία FiveM</title>
 
 <style>
 :root{
---primary:#003b7a;
---secondary:#0057b8;
---dark:#08111f;
---light:#f5f7fa;
+--blue:#004a99;
+--blue2:#0066cc;
+--dark:#08101d;
+--card:#101b2d;
+--white:#ffffff;
 }
 
 *{
@@ -22,9 +24,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0a1424;
+background:var(--dark);
 color:white;
-line-height:1.6;
 }
 
 nav{
@@ -36,218 +37,201 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-.nav-container{
-max-width:1200px;
+.navbar{
+max-width:1300px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:15px 25px;
 }
 
 .logo{
-font-size:1.5rem;
+font-size:28px;
 font-weight:bold;
-color:#fff;
 }
 
-.nav-links a{
+.menu a{
 color:white;
 text-decoration:none;
 margin-left:20px;
-transition:.3s;
+font-weight:600;
 }
 
-.nav-links a:hover{
+.menu a:hover{
 color:#4da6ff;
 }
 
 .hero{
 height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
+padding:20px;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80');
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
 }
 
-.hero-content h1{
-font-size:4rem;
+.hero h1{
+font-size:70px;
 margin-bottom:15px;
 }
 
-.hero-content p{
-font-size:1.3rem;
+.hero p{
+font-size:22px;
 margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 30px;
-background:var(--secondary);
-color:white;
+padding:14px 28px;
+margin:10px;
+border-radius:10px;
 text-decoration:none;
-border-radius:8px;
 font-weight:bold;
+color:white;
+background:var(--blue2);
 transition:.3s;
 }
 
 .btn:hover{
-background:#0077ff;
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
 section{
-padding:90px 20px;
+padding:100px 20px;
 }
 
 .container{
-max-width:1200px;
+max-width:1300px;
 margin:auto;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:2.3rem;
+font-size:40px;
 margin-bottom:50px;
 }
 
-.cards{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .card{
-background:#121f33;
-padding:30px;
-border-radius:12px;
-border:1px solid #1f3352;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
+background:var(--card);
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.1);
 }
 
 .card h3{
-margin-bottom:15px;
-color:#66b3ff;
-}
-
-.staff-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+margin-bottom:10px;
+color:#6fb6ff;
 }
 
 .staff{
-background:#121f33;
-padding:25px;
-border-radius:12px;
 text-align:center;
 }
 
-.staff h3{
-color:#66b3ff;
+.staff img{
+width:100px;
+height:100px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.rules li{
 margin-bottom:10px;
 }
 
-.contact{
-text-align:center;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
 }
 
 footer{
-background:#050b15;
+background:#050a12;
 padding:30px;
 text-align:center;
-border-top:1px solid #1d2f4a;
 }
 
 @media(max-width:768px){
 
-.hero-content h1{
-font-size:2.5rem;
+.hero h1{
+font-size:45px;
 }
 
-.nav-links{
+.menu{
 display:none;
 }
 
 }
 </style>
+
 </head>
+
 <body>
 
 <nav>
-<div class="nav-container">
+<div class="navbar">
 <div class="logo">🚔 ΕΛ.ΑΣ</div>
 
-<div class="nav-links">
-<a href="#about">Αρχική</a>
-<a href="#services">Υπηρεσίες</a>
-<a href="#staff">Διοίκηση</a>
+<div class="menu">
+<a href="#home">Αρχική</a>
+<a href="#departments">Τμήματα</a>
+<a href="#ranks">Βαθμοί</a>
+<a href="#staff">Προσωπικό</a>
+<a href="#rules">Κανόνες</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Επικοινωνία</a>
 </div>
 </div>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
 
-<div class="hero-content">
+<div>
 
 <h1>ΕΛ.ΑΣ</h1>
 
-<p>Ελληνική Αστυνομία - FiveM Roleplay Community</p>
+<p>Ελληνική Αστυνομία FiveM Roleplay</p>
 
-<a href="https://discord.gg/ΒΑΛΕ-ΤΟ-LINK-ΣΟΥ" class="btn">
-Σύνδεση στο Discord
+<a href="YOUR_DISCORD_LINK" class="btn">
+Discord
+</a>
+
+<a href="YOUR_FIVEM_LINK" class="btn">
+Σύνδεση στον Server
 </a>
 
 </div>
 
 </section>
 
-<section id="about">
+<section id="departments">
 
 <div class="container">
 
-<h2 class="section-title">Σχετικά με την Υπηρεσία</h2>
+<h2 class="title">Τμήματα</h2>
 
-<div class="cards">
-
-<div class="card">
-<h3>🚓 Περιπολίες</h3>
-<p>24ωρη αστυνόμευση και άμεση ανταπόκριση σε περιστατικά.</p>
-</div>
+<div class="grid">
 
 <div class="card">
-<h3>⚖️ Τήρηση Νόμου</h3>
-<p>Εφαρμογή της νομοθεσίας και προστασία των πολιτών.</p>
+<h3>🚓 Τροχαία</h3>
+<p>Έλεγχος κυκλοφορίας και παραβάσεων.</p>
 </div>
-
-<div class="card">
-<h3>📞 Άμεση Επέμβαση</h3>
-<p>Γρήγορη κινητοποίηση σε συμβάντα υψηλής προτεραιότητας.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<div class="container">
-
-<h2 class="section-title">Τμήματα</h2>
-
-<div class="cards">
 
 <div class="card">
 <h3>👮 Ασφάλεια</h3>
@@ -255,14 +239,38 @@ display:none;
 </div>
 
 <div class="card">
-<h3>🚔 Τροχαία</h3>
-<p>Έλεγχος κυκλοφορίας και οδική ασφάλεια.</p>
-</div>
-
-<div class="card">
 <h3>🛡️ ΕΚΑΜ</h3>
 <p>Ειδικές επιχειρήσεις υψηλού κινδύνου.</p>
 </div>
+
+<div class="card">
+<h3>⚡ ΔΙ.ΑΣ</h3>
+<p>Άμεση ανταπόκριση σε συμβάντα.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="ranks">
+
+<div class="container">
+
+<h2 class="title">Βαθμοί</h2>
+
+<div class="grid">
+
+<div class="card">Αρχηγός ΕΛ.ΑΣ</div>
+<div class="card">Υπαρχηγός</div>
+<div class="card">Ταξίαρχος</div>
+<div class="card">Αστυνομικός Διευθυντής</div>
+<div class="card">Αστυνόμος Α'</div>
+<div class="card">Αστυνόμος Β'</div>
+<div class="card">Υπαστυνόμος</div>
+<div class="card">Αρχιφύλακας</div>
+<div class="card">Αστυφύλακας</div>
 
 </div>
 
@@ -274,24 +282,64 @@ display:none;
 
 <div class="container">
 
-<h2 class="section-title">Διοίκηση</h2>
+<h2 class="title">Διοίκηση</h2>
 
-<div class="staff-grid">
+<div class="grid">
 
-<div class="staff">
-<h3>Αρχηγός ΕΛ.ΑΣ</h3>
+<div class="card staff">
+<h3>Αρχηγός</h3>
 <p>Το Όνομά Σου</p>
 </div>
 
-<div class="staff">
+<div class="card staff">
 <h3>Υπαρχηγός</h3>
-<p>Όνομα Υπαρχηγού</p>
+<p>Όνομα</p>
 </div>
 
-<div class="staff">
+<div class="card staff">
 <h3>Διοικητής</h3>
-<p>Όνομα Διοικητή</p>
+<p>Όνομα</p>
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="rules">
+
+<div class="container">
+
+<h2 class="title">Κανόνες</h2>
+
+<div class="card">
+
+<ul class="rules">
+<li>Σεβασμός προς όλους τους παίκτες.</li>
+<li>Απαγορεύεται η κατάχρηση εξουσίας.</li>
+<li>Υποχρεωτικό σοβαρό Roleplay.</li>
+<li>Χρήση ασυρμάτου κατά την υπηρεσία.</li>
+<li>Τήρηση SOP της υπηρεσίας.</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="container">
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1494905998402-395d579af36f">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
 
 </div>
 
@@ -301,25 +349,29 @@ display:none;
 
 <section id="contact">
 
-<div class="container contact">
+<div class="container">
 
-<h2 class="section-title">Επικοινωνία</h2>
+<h2 class="title">Επικοινωνία</h2>
 
-<p>Discord: ΒΑΛΕ ΤΟ DISCORD ΣΟΥ</p>
+<div class="card">
 
+<p>Discord Server: YOUR_DISCORD_LINK</p>
 <br>
+<p>Υποστήριξη μέσω Discord Tickets.</p>
 
-<a href="https://discord.gg/ΒΑΛΕ-ΤΟ-LINK-ΣΟΥ" class="btn">
-Join Discord
-</a>
+</div>
 
 </div>
 
 </section>
 
 <footer>
+© 2026 ΕΛ.ΑΣ FiveM Roleplay Community
+</footer>
 
-<p>© 2026 ΕΛ.ΑΣ - FiveM Roleplay Server</p>
+</body>
+</html>
+
 
 </footer>
 
