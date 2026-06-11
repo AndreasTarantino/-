@@ -4,27 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ΕΛ.ΑΣ | Ελληνική Αστυνομία FiveM</title>
+<title>ΕΛ.ΑΣ | Εγχειρίδιο Αστυνομίας</title>
 
 <style>
-:root{
---blue:#004a99;
---blue2:#0066cc;
---dark:#08101d;
---card:#101b2d;
---white:#ffffff;
-}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI,sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:var(--dark);
+background:#08131f;
 color:white;
 }
 
@@ -32,48 +25,41 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,.85);
-backdrop-filter:blur(10px);
-z-index:1000;
+background:#06101a;
+padding:15px;
+z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 
-.navbar{
-max-width:1300px;
-margin:auto;
+nav ul{
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 25px;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
 }
 
-.logo{
-font-size:28px;
+nav ul li{
+margin:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
 font-weight:bold;
 }
 
-.menu a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:600;
-}
-
-.menu a:hover{
-color:#4da6ff;
+nav a:hover{
+color:#4aa3ff;
 }
 
 .hero{
 height:100vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
 }
 
 .hero h1{
@@ -83,101 +69,37 @@ margin-bottom:15px;
 
 .hero p{
 font-size:22px;
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 28px;
-margin:10px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-color:white;
-background:var(--blue2);
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
 }
 
 section{
 padding:100px 20px;
-}
-
-.container{
-max-width:1300px;
+max-width:1200px;
 margin:auto;
 }
 
-.title{
+h2{
+margin-bottom:25px;
+color:#59b0ff;
 text-align:center;
-font-size:40px;
-margin-bottom:50px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
 }
 
 .card{
-background:var(--card);
-padding:25px;
-border-radius:15px;
-border:1px solid rgba(255,255,255,.1);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#6fb6ff;
-}
-
-.staff{
-text-align:center;
-}
-
-.staff img{
-width:100px;
-height:100px;
-border-radius:50%;
-margin-bottom:15px;
-}
-
-.rules li{
-margin-bottom:10px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-border-radius:12px;
-}
-
-footer{
-background:#050a12;
+background:#102033;
 padding:30px;
-text-align:center;
+border-radius:15px;
+margin-bottom:25px;
+border:1px solid #1f3a5c;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-font-size:45px;
+.card p{
+margin-bottom:15px;
+line-height:1.8;
 }
 
-.menu{
-display:none;
+.card li{
+margin-bottom:10px;
 }
 
-}
 </style>
 
 </head>
@@ -185,195 +107,135 @@ display:none;
 <body>
 
 <nav>
-<div class="navbar">
-<div class="logo">🚔 ΕΛ.ΑΣ</div>
 
-<div class="menu">
-<a href="#home">Αρχική</a>
-<a href="#departments">Τμήματα</a>
-<a href="#ranks">Βαθμοί</a>
-<a href="#staff">Προσωπικό</a>
-<a href="#rules">Κανόνες</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Επικοινωνία</a>
-</div>
-</div>
+<ul>
+
+<li><a href="#deontology">Κώδικας Δεοντολογίας</a></li>
+
+<li><a href="#rights">Δικαιώματα Πολίτη</a></li>
+
+<li><a href="#radio">Ασύρματοι</a></li>
+
+<li><a href="#center">Κέντρο</a></li>
+
+<li><a href="#units">Κλιμάκια</a></li>
+
+<li><a href="#schools">Σχολές</a></li>
+
+<li><a href="#staff">Προσωπικό</a></li>
+
+</ul>
+
 </nav>
 
-<section class="hero" id="home">
+<section class="hero">
 
 <div>
 
-<h1>ΕΛ.ΑΣ</h1>
+<h1>🚔 ΕΛ.ΑΣ</h1>
 
-<p>Ελληνική Αστυνομία FiveM Roleplay</p>
-
-<a href="YOUR_DISCORD_LINK" class="btn">
-Discord
-</a>
-
-<a href="YOUR_FIVEM_LINK" class="btn">
-Σύνδεση στον Server
-</a>
+<p>Επίσημο Εγχειρίδιο Ελληνικής Αστυνομίας FiveM</p>
 
 </div>
 
 </section>
 
-<section id="departments">
+<section id="deontology">
 
-<div class="container">
-
-<h2 class="title">Τμήματα</h2>
-
-<div class="grid">
+<h2>ΚΩΔΙΚΑΣ ΔΕΟΝΤΟΛΟΓΙΑΣ ΑΣΤΥΝΟΜΙΚΩΝ</h2>
 
 <div class="card">
-<h3>🚓 Τροχαία</h3>
-<p>Έλεγχος κυκλοφορίας και παραβάσεων.</p>
-</div>
 
-<div class="card">
-<h3>👮 Ασφάλεια</h3>
-<p>Έρευνες και καταπολέμηση εγκληματικότητας.</p>
-</div>
+<p>1. Ο κάθε αστυνομικός είναι υποχρεωμένος να υπακούει τους νόμους και να είναι προασπιστής αυτών.</p>
 
-<div class="card">
-<h3>🛡️ ΕΚΑΜ</h3>
-<p>Ειδικές επιχειρήσεις υψηλού κινδύνου.</p>
-</div>
+<p>2. Ο κάθε αστυνομικός είναι υποχρεωμένος να διατηρεί την ψυχραιμία του σε καταστάσεις που πάνε να ξεφύγουν από τον έλεγχο του.</p>
 
-<div class="card">
-<h3>⚡ ΔΙ.ΑΣ</h3>
-<p>Άμεση ανταπόκριση σε συμβάντα.</p>
-</div>
+<p>3. Ο κάθε αστυνομικός είναι υποχρεωμένος να σέβεται τους πολίτες, να απευθύνεται στον πληθυντικό και να είναι σε θέση να τους προστατέψει ακόμη και με κίνδυνο της ασφάλειάς του.</p>
 
-</div>
+<p>4. Ο κάθε αστυνομικός οφείλει να σέβεται την ιεραρχία και να εκτελεί τις εντολές των ανωτέρων του.</p>
+
+<p>5. Ο υπηρεσιακός εξοπλισμός χρησιμοποιείται μόνο εν ώρα υπηρεσίας.</p>
 
 </div>
 
 </section>
 
-<section id="ranks">
+<section id="rights">
 
-<div class="container">
-
-<h2 class="title">Βαθμοί</h2>
-
-<div class="grid">
-
-<div class="card">Αρχηγός ΕΛ.ΑΣ</div>
-<div class="card">Υπαρχηγός</div>
-<div class="card">Ταξίαρχος</div>
-<div class="card">Αστυνομικός Διευθυντής</div>
-<div class="card">Αστυνόμος Α'</div>
-<div class="card">Αστυνόμος Β'</div>
-<div class="card">Υπαστυνόμος</div>
-<div class="card">Αρχιφύλακας</div>
-<div class="card">Αστυφύλακας</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="staff">
-
-<div class="container">
-
-<h2 class="title">Διοίκηση</h2>
-
-<div class="grid">
-
-<div class="card staff">
-<h3>Αρχηγός</h3>
-<p>Το Όνομά Σου</p>
-</div>
-
-<div class="card staff">
-<h3>Υπαρχηγός</h3>
-<p>Όνομα</p>
-</div>
-
-<div class="card staff">
-<h3>Διοικητής</h3>
-<p>Όνομα</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="rules">
-
-<div class="container">
-
-<h2 class="title">Κανόνες</h2>
+<h2>ΔΙΚΑΙΩΜΑΤΑ ΠΟΛΙΤΗ</h2>
 
 <div class="card">
 
-<ul class="rules">
-<li>Σεβασμός προς όλους τους παίκτες.</li>
-<li>Απαγορεύεται η κατάχρηση εξουσίας.</li>
-<li>Υποχρεωτικό σοβαρό Roleplay.</li>
-<li>Χρήση ασυρμάτου κατά την υπηρεσία.</li>
-<li>Τήρηση SOP της υπηρεσίας.</li>
+<ul>
+
+<li>Βρίσκεστε υπό κράτηση/σύλληψη για τον αντίστοιχο λόγο.</li>
+
+<li>Έχετε το δικαίωμα να παραμείνετε σιωπηλοί.</li>
+
+<li>Ό,τι πείτε μπορεί και θα χρησιμοποιηθεί εναντίον σας στο δικαστήριο.</li>
+
+<li>Έχετε το δικαίωμα να κάνετε ένα τηλεφώνημα.</li>
+
+<li>Έχετε δικαίωμα νομικής εκπροσώπησης.</li>
+
+<li>Φαγητό και νερό δεν αφαιρούνται ποτέ.</li>
+
+<li>Η ταυτοποίηση πραγματοποιείται μέσω MDT.</li>
+
+<li>Αναφέρονται πάντα οι κατηγορίες και η συνολική ποινή.</li>
+
+<li>Σε περίπτωση αιτήματος παρέχεται δικηγόρος εφόσον είναι διαθέσιμος.</li>
+
 </ul>
 
 </div>
 
-</div>
-
 </section>
 
-<section id="gallery">
+<section id="radio">
 
-<div class="container">
-
-<h2 class="title">Gallery</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1494905998402-395d579af36f">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="container">
-
-<h2 class="title">Επικοινωνία</h2>
+<h2>ΠΡΩΤΟΚΟΛΛΟ ΑΣΥΡΜΑΤΩΝ</h2>
 
 <div class="card">
 
-<p>Discord Server: YOUR_DISCORD_LINK</p>
-<br>
-<p>Υποστήριξη μέσω Discord Tickets.</p>
+<p><strong>Τι είναι η Διαβίβαση;</strong></p>
 
-</div>
+<p>Διαβίβαση είναι η ενημέρωση του κέντρου από αστυνομικούς ή μονάδες για όσα συμβαίνουν στο πεδίο.</p>
+
+<p><strong>Τι είναι το Κέντρο;</strong></p>
+
+<p>Το κέντρο είναι υπεύθυνο για τον συντονισμό όλων των μονάδων και τη διαχείριση των συμβάντων.</p>
 
 </div>
 
 </section>
 
-<footer>
-© 2026 ΕΛ.ΑΣ FiveM Roleplay Community
-</footer>
+<section id="center">
 
-</body>
-</html>
+<h2>ΑΡΜΟΔΙΟΤΗΤΕΣ ΚΕΝΤΡΟΥ</h2>
 
+<div class="card">
 
-</footer>
+<ul>
 
-</body>
-</html>
+<li>Το κέντρο δεν εγκαταλείπει το τμήμα χωρίς έγκριση διοίκησης.</li>
+
+<li>Φορά πάντα τμηματική στολή.</li>
+
+<li>Γνωρίζει όλους τους κώδικες ασυρμάτου.</li>
+
+<li>Ελέγχει τις μονάδες ανά τακτά χρονικά διαστήματα.</li>
+
+<li>Οργανώνει ληστείες, ομηρίες και επιχειρήσεις.</li>
+
+<li>Παρακολουθεί τα tweets, τα μηνύματα πολιτών και τα robbery chats.</li>
+
+<li>Γνωρίζει όλες τις συχνότητες και τις ενέργειες των μονάδων.</li>
+
+<li>Οργανώνει Ε.Κ.Α.Μ ή Ο.Π.Κ.Ε σε περιπτώσεις ομηρίας.</li>
+
+</ul>
+
+</div>
+
+</section>
